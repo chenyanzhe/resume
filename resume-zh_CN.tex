@@ -7,86 +7,117 @@
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{hyperref}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{陈彦哲}
 
 % {E-mail}{mobilephone}{homepage}
 % be careful of _ in emaill address
-\contactInfo{my\_address@yuanbin.me}{(+86) 131-221-87xxx}{http://www.yuanbin.me}
+\contactInfo{yanzhe.cn@gmail.com}{(+86) 185-1669-3610}{}
 % {E-mail}{mobilephone}
 % keep the last empty braces!
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
  
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{并行与分布式系统研究所, 上海交通大学}}{2014.9 - 2017.3}
+\datedline{\textit{软件工程硕士}, \textit{导师}: \href{http://ipads.se.sjtu.edu.cn/binyu_zang}{\textit{臧斌宇教授}}}{\textit{绩点}: 2.81\ /\ 3.3, \textit{排名}: 2\ /\ 95}
+\datedsubsection{\textbf{上海交通大学}}{2010.9 - 2014.6}
+\datedline{\textit{软件工程学士}}{\textit{绩点}: 3.79\ /\ 4.3, \textit{排名}: 8\ /\ 99}
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
-\begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
-\end{itemize}
-
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
-\begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
-\end{itemize}
-\end{onehalfspacing}
-
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
-\begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
-\end{itemize}
-\end{onehalfspacing}
-
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ IT 技能}
-% increase linespacing [parsep=0.5ex]
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
+\role{分布式事务处理}{C++，科研项目}
+DrTM是一个基于\ \underline{HTM}和\ \underline{RDMA}两种硬件构建的分布式事务处理系统。
+\\[2pt]
+DrTM利用HTM提供的\ \underline{强原子性}降低并发控制的复杂性，简化分布式事务的设计。
+\\[2pt]
+DrTM利用RDMA提供的\ \underline{强一致性}降低分布式提交的延迟，提高分布式事务的性能。
+\\[2pt]
+DrTM是合作项目，我负责的工作有:
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 设计并实现了一套基于HTM和RDMA的分布式并发控制协议
+  \item 实现了一组基准测试集 (TPC-C, SmallBank, TATP) 以验证系统的高性能
+  \item 进一步扩展协议，支持事务的备份，提供了系统的持久性
 \end{itemize}
+
+\datedsubsection{\textbf{PowerLyra}}{ 2013 - 2015 }
+\role{分布式图计算}{C++，科研项目}
+自然图中通常存在严重的不均衡性：少量节点度数很高，大量节点度数很低。
+\\[2pt]
+PowerLyra是针对\ \underline{自然图}而设计的分布式图计算系统。
+\\[2pt]
+PowerLyra对高度数节点和低度数节点\ \underline{区别对待}，提出了混合的划分和计算方法。
+\\[2pt]
+PowerLyra是合作项目，我负责的工作有：
+\begin{itemize}[parsep=0.5ex]
+  \item 合作实现了PowerLyra中的混合划分方法
+  \item 将此划分方法与已有的方法进行比较，验证了混合的有效性
+\end{itemize}
+
+\datedsubsection{\textbf{GENE-MAP}}{ 2013 - 2014 }
+\role{地图泛化}{C++，比赛项目}
+地图泛化常被用于展示不同粒度的地图。它通常存在泛化\ \underline{精准度}和泛化\ \underline{速度}之间的权衡。
+\\[2pt]
+GENE-MAP提出了一种基于\ \underline{迭代}和\ \underline{贪心}的权衡算法，为地图泛化提供了一种解决方案。
+\\[2pt]
+GENE-MAP是个人项目，我完成的工作有：
+\begin{itemize}[parsep=0.5ex]
+  \item 设计并实现了一种基于迭代和贪心的泛化方法
+  \item 利用OpenMP并行泛化方法
+\end{itemize}
+
+\datedsubsection{\textbf{TiDB}}{ 2015 - 至今 }
+\role{分布式数据库}{Go，创业项目}
+TiDB是PingCAP创业团队开发的分布式 SQL 数据库。
+\\[2pt]
+TiDB是开源项目，我参与的贡献有：
+\begin{itemize}[parsep=0.5ex]
+  \item 实现了数个兼容 MySQL 的内置函数
+  \item 修复了已有内置函数实现上的一个缺陷
+  \item 修复了部分文档的拼写和语法错误
+\end{itemize}
+
+\section{\faFile\ 论文发表}
+\titleformat{\subsection}
+  {\normalsize\raggedright}
+  {}{0em}
+  {}
+\datedsubsection{\textbf{Fast and General Distributed Transactions using RDMA and HTM}}{\textbf{EuroSys} 2016}
+\datedline{\small\underline{Yanzhe Chen}, Xinda Wei, Jiaxin Shi, Rong Chen and Haibo Chen.}{\href{}{\faFilePdfO}\ \ \href{}{\faFilePowerpointO}}
+
+\datedsubsection{\textbf{Fast In-memory Transaction Processing using RDMA and HTM}}{\textbf{SOSP} 2015}
+\datedline{\small Xingda Wei, Jiaxin Shi, \underline{Yanzhe Chen}, Rong Chen, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/drtm-sosp15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/drtm-sosp15-slides.pptx}{\faFilePowerpointO}}
+
+\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+\datedsubsection{\textbf{PowerLyra: Differentiated Graph Computation and Partitioning on Skewed Graphs}}{\textbf{EuroSys} 2015}
+\datedline{\small Rong Chen, Jiaxin Shi, \underline{Yanzhe Chen}, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/powerlyra-eurosys15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/powerlyra-eurosys15-slides.pptx}{\faFilePowerpointO}}
+
+\datedsubsection{\textbf{Greedy Map Generalization by Iterative Point Removal}}{\textbf{SIGSPATIAL} 2014}
+\datedline{\small\underline{Yanzhe Chen}, Yin Wang, Rong Chen, Haibo Chen and Binyu Zang.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/sigspatialcup14.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/sigspatialcup14-slides.pptx}{\faFilePowerpointO}}
 
 \section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
+\datedsubsection{ACM EuroSys 最佳论文奖}{2015}
+\datedsubsection{上海交通大学硕士一等学业奖学金}{2014}
+\datedsubsection{ACM SIGSPATIAL GISCUP 第三名}{2014}
+\datedsubsection{上海交通大学优秀毕业生}{2014}
+\datedsubsection{上海交通大学心动二等奖学金}{2013}
+\datedsubsection{新鸿基地产郭氏基金奖助学金}{2012}
+\datedsubsection{上海交通大学C等奖学金}{2012}
+\datedsubsection{申银万国奖学金}{2011}
 
-\section{\faInfo\ 其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+\section{\faBook\ 助教工作}
+\datedsubsection{计算机系统设计和实现}{2016}
+\datedsubsection{分布式系统}{2015}
+\datedsubsection{程序设计}{2013}
+
+\section{\faCogs\ 专业技能}
+\begin{itemize}[parsep=1.0ex]
+  \item 编程语言: 熟练使用 C\ /\ C++，了解 Python, Bash, Java, Go
+  \item 英语水平: CET-4 633分，CET-6 561分，可用英语做展示和日常交流
+  \item 系统工具: 4年以上的Unix使用经验，了解 Git，Vim，GCC 等开发工具
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}

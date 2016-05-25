@@ -3,80 +3,121 @@
 \documentclass{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{hyperref}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Yanzhe Chen}
 
 % {E-mail}{mobilephone}{homepage}
 % be careful of _ in emaill address
-\contactInfo{my\_address@yuanbin.me}{(+86) 131-221-87xxx}{http://www.yuanbin.me}
+\contactInfo{yanzhe.cn@gmail.com}{(+86) 185-1669-3610}{}
 % {E-mail}{mobilephone}
 % keep the last empty braces!
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\normalsize \textbf{Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University}}{2014.9 - 2017.3}
+\datedline{\small \textit{M.S. in Software Engineering, Advisor: \href{http://ipads.se.sjtu.edu.cn/binyu_zang}{Prof. Binyu Zang}}}{\textbf{GPA}: 2.81\ /\ 3.3, \textbf{Rank}: 2\ /\ 95}
+\datedsubsection{\normalsize \textbf{Shanghai Jiao Tong University}}{2010.9 - 2014.6}
+\datedline{\small \textit{B.Eng. in Software Engineering}}{\textbf{GPA}: 3.79\ /\ 4.3, \textbf{Rank}: 8\ /\ 99}
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
+\role{Distributed Transaction Processing}{C++, Research Project}
+DrTM is a fast and general in-memory transaction processing system using \underline{HTM} and \underline{RDMA}.
+\\[2pt]
+DrTM leverages the \textit{strong atomicity} of HTM to reduce the design complexity.
+\\[2pt]
+DrTM uses the \textit{strong consistency} of RDMA operations to achieve low latency.
+\\[2pt]
+DrTM is a \textit{cooperated} project, my contributions are:
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item {Design and implement an HTM/RDMA friendly distributed concurrency control scheme.}
+  \item {Implement a set of benchmarks (TPC-C, SmallBank, TATP) that confirm the high performance.}
+  \item {Add an optimistic replication scheme extension for system durability.}
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{PowerLyra}}{ 2013 - 2015 }
+\role{Distributed Graph Computation}{C++, Research Project}
+Natural graphs usually exhibit \textit{skewed} distribution.
+\\[2pt]
+Common \textit{ONE size fits ALL} design is not suitable for \textit{skewed} graphs.
+\\[2pt]
+PowerLyra gains efficiency by \textit{differentiating} high-degree and low-degree vertices in \textit{skew} graphs.
+\\[2pt]
+PowerLyra is a \textit{cooperated} project, my contributions are:
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item {Implement a \textit{hybrid} graph partition algorithm that leverages both locality and parallelism.}
+  \item {Compare the partition algorithm against existing ones to confirm the efficiency.}
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\datedsubsection{\textbf{GENE-MAP}}{ 2013 - 2014 }
+\role{Map Generalization}{C++, Contest Project}
+Map generalization is widely used in producing maps with less detail according to map scale.
+\\[2pt]
+The algorithms used for map generalization usually exhibit the tradeoff between \textit{performance} and \textit{accuracy}.
+\\[2pt]
+GENE-MAP shows an \textit{iterative} and \textit{greedy} algorithm which can solve the problem efficiently.
+\\[2pt]
+GENE-MAP is a \textit{personal} project, my contributions are:
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item {Design and implement an \textit{iterative} and \textit{greedy} algorithm for map generalization.}
+  \item {Parallelize the algorithm using OpenMP library.}
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+\datedsubsection{\textbf{TiDB}}{ 2015 - Present }
+\role{Distributed Database}{Go, Startup Project}
+TiDB is a distributed SQL database developed by PingCAP.
+\\[2pt]
+TiDB is an \textit{open source} project, my contributions are:
+\begin{itemize}
+  \item {Implement several MySQL compatible built-in functions.}
+  \item {Fix one bug in the existing built-in functions.}
+  \item {Fix multiple typos and grammar errors in the documentation.}
 \end{itemize}
+
+\newpage
+
+\section{\faFile\ Publications}
+\titleformat{\subsection}
+  {\normalsize\raggedright}
+  {}{0em}
+  {}
+\datedsubsection{\textbf{Fast and General Distributed Transactions using RDMA and HTM}}{\textbf{EuroSys} 2016}
+\datedline{\small\underline{Yanzhe Chen}, Xinda Wei, Jiaxin Shi, Rong Chen and Haibo Chen.}{\href{}{\faFilePdfO}\ \ \href{}{\faFilePowerpointO}}
+
+\datedsubsection{\textbf{Fast In-memory Transaction Processing using RDMA and HTM}}{\textbf{SOSP} 2015}
+\datedline{\small Xingda Wei, Jiaxin Shi, \underline{Yanzhe Chen}, Rong Chen, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/drtm-sosp15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/drtm-sosp15-slides.pptx}{\faFilePowerpointO}}
+
+\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+\datedsubsection{\textbf{PowerLyra: Differentiated Graph Computation and Partitioning on Skewed Graphs}}{\textbf{EuroSys} 2015}
+\datedline{\small Rong Chen, Jiaxin Shi, \underline{Yanzhe Chen}, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/powerlyra-eurosys15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/powerlyra-eurosys15-slides.pptx}{\faFilePowerpointO}}
+
+\datedsubsection{\textbf{Greedy Map Generalization by Iterative Point Removal}}{\textbf{SIGSPATIAL} 2014}
+\datedline{\small\underline{Yanzhe Chen}, Yin Wang, Rong Chen, Haibo Chen and Binyu Zang.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/sigspatialcup14.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/sigspatialcup14-slides.pptx}{\faFilePowerpointO}}
 
 \section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\datedsubsection{ACM EuroSys Best Paper Award}{2015}
+\datedsubsection{First-class Academic Scholarship for M.S., Shanghai Jiao Tong University}{2014}
+\datedsubsection{ACM SIGSPATIAL GISCUP \nth{3} Place}{2014}
+\datedsubsection{Outstanding College Graduate of Shanghai Jiao Tong University}{2014}
+\datedsubsection{XinDong Scholarship (second-class) of Shanghai Jiao Tong University}{2013}
+\datedsubsection{Sun Hung Kai Properties Scholarship}{2012}
+\datedsubsection{Academic Excellence Scholarship (third-class) of Shanghai Jiao Tong University}{2012}
+\datedsubsection{ShenYin and WanGuo Special Scholarship of Shanghai Jiao Tong University}{2011}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+\section{\faBook\ Teaching Assistant}
+\datedsubsection{Computer System Design and Implementation}{2016}
+\datedsubsection{Distributed Systems}{2015}
+\datedsubsection{Introduction to Programming}{2013}
+
+\section{\faCogs\ SKILLS}
+\begin{itemize}[parsep=1.0ex]
+  \item Programming Languages: Familiar with C\ /\ C++; Some experience with Python, Bash, Java, Go
+  \item English: CET-4 633, CET-6 561
+  \item Systems and Tools: 4 years experience with Unix; Familiar with Git, Vim and GCC toolchains.
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}

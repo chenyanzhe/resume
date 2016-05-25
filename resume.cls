@@ -56,6 +56,15 @@
   {}
 \titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
 
+\RequirePackage{fancybox}
+\newcommand{\mybox}[1]{%
+  {% open a group for a local setting
+   \setlength{\fboxsep}{-1\fboxrule}% the rule will be inside the box boundary
+   \setlength{\shadowsize}{2pt}
+   \ovalbox{\hspace{3.5pt}\strut#1\hspace{3.5pt}}% print the box, with some padding at the left and right
+  }% close the group
+}
+
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
 }
