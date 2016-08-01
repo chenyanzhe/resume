@@ -23,20 +23,24 @@
 \datedsubsection{\normalsize \textbf{Shanghai Jiao Tong University}}{2010.9 - 2014.6}
 \datedline{\small \textit{B.Eng. in Software Engineering}}{\textbf{GPA}: 3.79\ /\ 4.3, \textbf{Rank}: 8\ /\ 99}
 
-\section{\faUsers\ Experience}
+\section{\faBriefcase\ Internship}
+\datedsubsection{\textbf{Microsoft, China}}{ 2016.7 - 2016.9 }
+\role{Cloud \& Enterprise Group}{OSTC, SDE Intern}
+Developed a Azure resource monitor system called Rocket. Rocket can track the usage status across different data centers and raise the alert when idle resources are found. With the help of Rocket, team members can have a better understanding of the cluster usage and save money.
+\\[2pt]
+Rocket is built as a SPA using the MEAN stack. It can ship with the Docker and have the advantage of cross platform and lightweight deployment.
+
+\section{\faUsers\ Projects}
 \datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
 \role{Distributed Transaction Processing}{C++, Research Project}
-DrTM is a fast and general in-memory transaction processing system using \underline{HTM} and \underline{RDMA}.
+DrTM is a fast and general in-memory transaction system which provides high throughput and low latency.
 \\[2pt]
-DrTM leverages the \textit{strong atomicity} of HTM to reduce the design complexity.
-\\[2pt]
-DrTM uses the \textit{strong consistency} of RDMA operations to achieve low latency.
+DrTM leverages two hardware features called HTM and RDMA and designed a hardware-friendly protocol to boost the distributed transaction processing. Two papers based on this project are accepted by SOSP’15 and EuroSys’16.
 \\[2pt]
 DrTM is a \textit{cooperated} project, my contributions are:
 \begin{itemize}
-  \item {Design and implement an HTM/RDMA friendly distributed concurrency control scheme.}
-  \item {Implement a set of benchmarks (TPC-C, SmallBank, TATP) that confirm the high performance.}
-  \item {Add an optimistic replication scheme extension for system durability.}
+  \item {Design and implement an OCC concurrency control scheme. Enable transaction backup and recovery using HTM and RDMA.}
+  \item {Implement a suite of benchmarks (TPC-C, SmallBank, TATP) that confirms the high performance.}
 \end{itemize}
 
 \datedsubsection{\textbf{PowerLyra}}{ 2013 - 2015 }
@@ -55,7 +59,7 @@ PowerLyra is a \textit{cooperated} project, my contributions are:
 
 \datedsubsection{\textbf{GENE-MAP}}{ 2013 - 2014 }
 \role{Map Generalization}{C++, Contest Project}
-Map generalization is widely used in producing maps with less detail according to map scale.
+Map generalization is widely used in online map services.
 \\[2pt]
 The algorithms used for map generalization usually exhibit the tradeoff between \textit{performance} and \textit{accuracy}.
 \\[2pt]
@@ -67,18 +71,17 @@ GENE-MAP is a \textit{personal} project, my contributions are:
   \item {Parallelize the algorithm using OpenMP library.}
 \end{itemize}
 
-\datedsubsection{\textbf{TiDB}}{ 2015 - Present }
-\role{Distributed Database}{Go, Startup Project}
-TiDB is a distributed SQL database developed by PingCAP.
+\datedsubsection{\textbf{TiDB}}{ 2015 - 2016 }
+\role{Distributed Database}{Go, Open Source Practise}
+TiDB is a distributed SQL database developed by PingCAP. I contributed 4 patches to the community.
 \\[2pt]
 TiDB is an \textit{open source} project, my contributions are:
 \begin{itemize}
-  \item {Implement several MySQL compatible built-in functions.}
-  \item {Fix one bug in the existing built-in functions.}
+  \item {Implement two built-in functions in MySQL compatible layer.}
+  \item {Resolve an exception when handling invalid input in a built-in function.}
+  \item {Fix the connection id inconsistency problem.}
   \item {Fix multiple typos and grammar errors in the documentation.}
 \end{itemize}
-
-\newpage
 
 \section{\faFile\ Publications}
 \titleformat{\subsection}
@@ -86,17 +89,17 @@ TiDB is an \textit{open source} project, my contributions are:
   {}{0em}
   {}
 \datedsubsection{\textbf{Fast and General Distributed Transactions using RDMA and HTM}}{\textbf{EuroSys} 2016}
-\datedline{\small\underline{Yanzhe Chen}, Xinda Wei, Jiaxin Shi, Rong Chen and Haibo Chen.}{\href{}{\faFilePdfO}\ \ \href{}{\faFilePowerpointO}}
+\datedline{\small\underline{Yanzhe Chen}, Xinda Wei, Jiaxin Shi, Rong Chen and Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/drtmr-eurosys16.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/drtmr-eurosys16-slides.pptx}{\faFilePowerpointO}}
 
 \datedsubsection{\textbf{Fast In-memory Transaction Processing using RDMA and HTM}}{\textbf{SOSP} 2015}
-\datedline{\small Xingda Wei, Jiaxin Shi, \underline{Yanzhe Chen}, Rong Chen, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/drtm-sosp15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/drtm-sosp15-slides.pptx}{\faFilePowerpointO}}
+\datedline{\small Xingda Wei, Jiaxin Shi, \underline{Yanzhe Chen}, Rong Chen, Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/drtm-sosp15.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/drtm-sosp15-slides.pptx}{\faFilePowerpointO}}
 
 \titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
 \datedsubsection{\textbf{PowerLyra: Differentiated Graph Computation and Partitioning on Skewed Graphs}}{\textbf{EuroSys} 2015}
-\datedline{\small Rong Chen, Jiaxin Shi, \underline{Yanzhe Chen}, Haibo Chen.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/powerlyra-eurosys15.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/powerlyra-eurosys15-slides.pptx}{\faFilePowerpointO}}
+\datedline{\small Rong Chen, Jiaxin Shi, \underline{Yanzhe Chen}, Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/powerlyra-eurosys15.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/powerlyra-eurosys15-slides.pptx}{\faFilePowerpointO}}
 
 \datedsubsection{\textbf{Greedy Map Generalization by Iterative Point Removal}}{\textbf{SIGSPATIAL} 2014}
-\datedline{\small\underline{Yanzhe Chen}, Yin Wang, Rong Chen, Haibo Chen and Binyu Zang.}{\href{http://7xra08.com1.z0.glb.clouddn.com/pubs/sigspatialcup14.pdf}{\faFilePdfO}\ \ \href{http://7xra08.com1.z0.glb.clouddn.com/slides/sigspatialcup14-slides.pptx}{\faFilePowerpointO}}
+\datedline{\small\underline{Yanzhe Chen}, Yin Wang, Rong Chen, Haibo Chen and Binyu Zang.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/gmap-sigspatialcup14.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/gmap-sigspatialcup14-slides.pptx}{\faFilePowerpointO}}
 
 \section{\faHeartO\ Honors and Awards}
 \datedsubsection{ACM EuroSys Best Paper Award}{2015}
@@ -115,7 +118,7 @@ TiDB is an \textit{open source} project, my contributions are:
 
 \section{\faCogs\ SKILLS}
 \begin{itemize}[parsep=1.0ex]
-  \item Programming Languages: Familiar with C\ /\ C++; Some experience with Python, Bash, Java, Go
+  \item Programming Languages: Familiar with C\ /\ C++; Some experience with JavaScript, Python, Bash, Java, Go
   \item English: CET-4 633, CET-6 561
   \item Systems and Tools: 4 years experience with Unix; Familiar with Git, Vim and GCC toolchains.
 \end{itemize}
