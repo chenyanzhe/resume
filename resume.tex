@@ -26,17 +26,17 @@
 \section{\faBriefcase\ Internship}
 \datedsubsection{\textbf{Microsoft, China}}{ 2016.7 - 2016.9 }
 \role{Cloud \& Enterprise Group}{OSTC, SDE Intern}
-Developed a Azure resource monitor system called Rocket. Rocket can track the usage status across different data centers and raise the alert when idle resources are found. With the help of Rocket, team members can have a better understanding of the cluster usage and save money.
-\\[2pt]
+Developed an Azure resource monitor system called Rocket. Rocket can track the usage status across different data centers and raise the alert when idle resources are found. With the help of the Rocket, team members can have a better understanding of the cluster usage and save money.
+\\[5pt]
 Rocket is built as a SPA using the MEAN stack. It can ship with the Docker and have the advantage of cross platform and lightweight deployment.
 
 \section{\faUsers\ Projects}
 \datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
 \role{Distributed Transaction Processing}{C++, Research Project}
 DrTM is a fast and general in-memory transaction system which provides high throughput and low latency.
-\\[2pt]
-DrTM leverages two hardware features called HTM and RDMA and designed a hardware-friendly protocol to boost the distributed transaction processing. Two papers based on this project are accepted by SOSP’15 and EuroSys’16.
-\\[2pt]
+\\[5pt]
+DrTM leverages two hardware features called HTM and RDMA and designed a hardware-friendly protocol to boost the distributed transaction processing. Two papers based on this project were successively accepted by SOSP’15 and EuroSys’16.
+\\[5pt]
 DrTM is a \textit{cooperated} project, my contributions are:
 \begin{itemize}
   \item {Design and implement an OCC concurrency control scheme. Enable transaction backup and recovery using HTM and RDMA.}
@@ -45,42 +45,37 @@ DrTM is a \textit{cooperated} project, my contributions are:
 
 \datedsubsection{\textbf{PowerLyra}}{ 2013 - 2015 }
 \role{Distributed Graph Computation}{C++, Research Project}
-Natural graphs usually exhibit \textit{skewed} distribution.
-\\[2pt]
-Common \textit{ONE size fits ALL} design is not suitable for \textit{skewed} graphs.
-\\[2pt]
-PowerLyra gains efficiency by \textit{differentiating} high-degree and low-degree vertices in \textit{skew} graphs.
-\\[2pt]
+Graph computation is widely used to reason about large-scale complex data in machine learning and data mining. PowerLyra is a performance extension to GraphLab, which is a open source graph computation framework.
+\\[5pt]
+PowerLyra discusses two ways of graph partition: Vertex-Cut and Edge-Cut and analyses their merits and demerits. It shows a hybrid partition to reduce redundant message and improves the performance dramatically. The paper based on this project was accepted by EuroSys’15 and won the best paper award.
+\\[5pt]
 PowerLyra is a \textit{cooperated} project, my contributions are:
 \begin{itemize}
   \item {Implement a \textit{hybrid} graph partition algorithm that leverages both locality and parallelism.}
-  \item {Compare the partition algorithm against existing ones to confirm the efficiency.}
 \end{itemize}
 
 \datedsubsection{\textbf{GENE-MAP}}{ 2013 - 2014 }
 \role{Map Generalization}{C++, Contest Project}
-Map generalization is widely used in online map services.
-\\[2pt]
-The algorithms used for map generalization usually exhibit the tradeoff between \textit{performance} and \textit{accuracy}.
-\\[2pt]
-GENE-MAP shows an \textit{iterative} and \textit{greedy} algorithm which can solve the problem efficiently.
-\\[2pt]
+Map generalization is one of the technologies for online map service. GENE-MAP provides an efficient generalization algorithm to make a trade off between precision and speed.
+\\[5pt]
+GENE-MAP exploits \textit{iteration} and \textit{greedy} strategy to ensure a good balance between precision and speed. It won the third place in 2014 ACM GISCUP competition and its paper was accepted by SIGSPATIAL’14.
+\\[5pt]
 GENE-MAP is a \textit{personal} project, my contributions are:
 \begin{itemize}
   \item {Design and implement an \textit{iterative} and \textit{greedy} algorithm for map generalization.}
-  \item {Parallelize the algorithm using OpenMP library.}
+  \item {Parallelize the algorithm using the OpenMP library.}
 \end{itemize}
 
 \datedsubsection{\textbf{TiDB}}{ 2015 - 2016 }
 \role{Distributed Database}{Go, Open Source Practise}
 TiDB is a distributed SQL database developed by PingCAP. I contributed 4 patches to the community.
-\\[2pt]
+\\[5pt]
 TiDB is an \textit{open source} project, my contributions are:
 \begin{itemize}
-  \item {Implement two built-in functions in MySQL compatible layer.}
-  \item {Resolve an exception when handling invalid input in a built-in function.}
-  \item {Fix the connection id inconsistency problem.}
-  \item {Fix multiple typos and grammar errors in the documentation.}
+  \item {Implement two built-in functions in MySQL compatible layer.} (\href{https://github.com/pingcap/tidb/pull/755}{PR \#755})
+  \item {Resolve an exception when handling invalid input in a built-in function.} (\href{https://github.com/pingcap/tidb/pull/759}{PR \#759})
+  \item {Fix the connection id inconsistency problem.} (\href{https://github.com/pingcap/tidb/pull/770}{PR \#770})
+  \item {Fix multiple typos and grammar errors in the documentation.} (\href{https://github.com/pingcap/tidb/pull/757}{PR \#757})
 \end{itemize}
 
 \section{\faFile\ Publications}
@@ -118,7 +113,7 @@ TiDB is an \textit{open source} project, my contributions are:
 
 \section{\faCogs\ SKILLS}
 \begin{itemize}[parsep=1.0ex]
-  \item Programming Languages: Familiar with C\ /\ C++; Some experience with JavaScript, Python, Bash, Java, Go
+  \item Programming Languages: Familiar with C\ /\ C++; Some experience with JavaScript, Python, Bash, Java, and Go
   \item English: CET-4 633, CET-6 561
   \item Systems and Tools: 4 years experience with Unix; Familiar with Git, Vim and GCC toolchains.
 \end{itemize}
