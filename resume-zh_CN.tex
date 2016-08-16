@@ -23,16 +23,17 @@
  
 \section{\faGraduationCap\ 教育背景}
 \datedsubsection{\textbf{并行与分布式系统研究所, 上海交通大学}}{2014.9 - 2017.3}
-\datedline{\textit{软件工程硕士}, \textit{导师}: \href{http://ipads.se.sjtu.edu.cn/binyu_zang}{\textit{臧斌宇教授}}}{\textit{绩点}: 2.81\ /\ 3.3, \textit{排名}: 2\ /\ 95}
+\datedline{\textit{软件工程硕士}, \textit{导师}: \href{http://ipads.se.sjtu.edu.cn/binyu_zang}{\textit{臧斌宇教授}}}{\textit{绩点}: 2.81\ /\ 3.3, \textit{排名}: 2\ /\ 96}
 \datedsubsection{\textbf{上海交通大学}}{2010.9 - 2014.6}
 \datedline{\textit{软件工程学士}}{\textit{绩点}: 3.79\ /\ 4.3, \textit{排名}: 8\ /\ 99}
 
 \section{\faBriefcase\ 实习经历}
 \datedsubsection{\textbf{微软中国}}{ 2016.7 - 2016.9 }
-\role{云计算与企业事业部} {开源技术中心，软件开发工程师}
-实习期间开发了一套Azure资源监控系统，监控不同数据中心的资源使用情况，及时提醒释放闲置的资源，为团队节省开支。
-\\[5pt]
-该系统以SPA的形式提供服务，采用MEAN架构，支持Docker部署，具有跨平台和部署轻量的优势。
+\role{云计算与企业事业部} {云计算创新中心，软件开发工程师}
+
+设计并实现了一套Azure开销监控服务，帮助团队节省支出。
+
+该系统以单页应用（SPA）的形式提供服务，使用MEAN技术栈，支持Docker部署。
 
 \section{\faUsers\ 项目经历}
 \datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
@@ -44,11 +45,12 @@ DrTM结合硬件事务内存（HTM）和远程直接内存存取（RDMA）两种
 \\[5pt]
 DrTM是合作项目，我负责的工作有:
 \begin{itemize}[parsep=0.5ex]
-  \item 设计实现了一套基于乐观并发控制（OCC）的协议，解决了HTM和RDMA环境下事务难以备份和恢复的问题
-  \item 实现了一组基准测试集（TPC-C, SmallBank, TATP），验证了分布式事务高吞吐量、低延迟的特性
+  \item 基于RDMA设计了一个带租约的共享锁
+  \item 设计实现了一套基于乐观并发控制（OCC）的协议
+  \item 解决了HTM和RDMA环境下事务难以备份的问题
 \end{itemize}
 
-\datedsubsection{\textbf{PowerLyra}}{ 2013 - 2015 }
+\datedsubsection{\textbf{PowerLyra}}{ 2014 - 2015 }
 \role{分布式图计算}{C++，科研项目}
 图计算是针对具有复杂依赖关系和迭代计算特征的算法所设计的基于大数据的并行计算模型。PowerLyra 是开源分布式图计算框架 GraphLab 的改进版。
 \\[5pt]
@@ -57,6 +59,7 @@ PowerLyra 分析了 业界普遍采用的两种图划分方式：Vertex-Cut 和 
 \\[5pt]
 PowerLyra是合作项目，我负责的工作有：
 \begin{itemize}[parsep=0.5ex]
+  \item 分析现有划分方法的冗余因子
   \item 合作实现了PowerLyra中的 Hybrid-Cut 方法
 \end{itemize}
 
@@ -69,18 +72,6 @@ GENE-MAP利用迭代和贪心的思想，在精准度和速度间做出权衡，
 GENE-MAP是个人项目，我完成的工作有：
 \begin{itemize}[parsep=0.5ex]
   \item 设计并实现了一种基于迭代和贪心的泛化方法，利用OpenMP实现了算法的并行
-\end{itemize}
-
-\datedsubsection{\textbf{TiDB}}{ 2015 - 2016 }
-\role{分布式数据库}{Go，开源实践}
-TiDB是PingCAP创业团队开发的分布式 SQL 数据库。我作为社区贡献者为TiDB贡献了4个patch。
-\\[5pt]
-TiDB是开源项目，我参与的贡献有：
-\begin{itemize}[parsep=0.5ex]
-  \item 为TiDB的MySQL兼容层增加了两个内置函数（\href{https://github.com/pingcap/tidb/pull/755}{PR \#755}）
-  \item 修复了一个内置函数在非法参数下的异常行为（\href{https://github.com/pingcap/tidb/pull/759}{PR \#759}）
-  \item 修复了TiDB中Connection ID不一致的行为（\href{https://github.com/pingcap/tidb/pull/770}{PR \#770}）
-  \item 修复了部分文档的拼写和语法错误（\href{https://github.com/pingcap/tidb/pull/757}{PR \#757}）
 \end{itemize}
 
 \section{\faFile\ 论文发表}
@@ -108,7 +99,6 @@ TiDB是开源项目，我参与的贡献有：
 \datedsubsection{上海交通大学优秀毕业生}{2014}
 \datedsubsection{上海交通大学心动二等奖学金}{2013}
 \datedsubsection{新鸿基地产郭氏基金奖助学金}{2012}
-\datedsubsection{上海交通大学C等奖学金}{2012}
 \datedsubsection{申银万国奖学金}{2011}
 
 \section{\faBook\ 助教工作}
@@ -118,9 +108,9 @@ TiDB是开源项目，我参与的贡献有：
 
 \section{\faCogs\ 专业技能}
 \begin{itemize}[parsep=1.0ex]
-  \item 编程语言: 熟练使用 C++，有 JavaScript, Python, Bash, Java, Go的使用经历
-  \item 英语水平: CET-4 633分，CET-6 561分，可用英语做展示和日常交流
-  \item 系统工具: 4年以上的Unix使用经验，了解 Git，Vim，GCC 等开发工具
+  \item 编程语言: 熟练使用 C++，有 JavaScript, Bash, Java的使用经历
+  \item 系统工具: 4年以上的Unix使用经验，了解 Git，Vim等开发工具
+  \item 英语水平: CET-6 561分，在国际学术会议上做过两次演讲
 \end{itemize}
 
 \end{document}
