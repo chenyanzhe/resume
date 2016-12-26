@@ -31,12 +31,22 @@ Designed and implemented an Azure cost monitoring service to help reduce team's 
   \item {Built as a SPA using the MEAN stack, shipping with the Docker.}
   \item {Recommendation (4 in 14) from judges in \textbf{Microsoft Young Hackathon} semi-final.}
 \end{itemize}
-
+Rework time adjustment policy in HyperV timesync module.
+\begin{itemize}[leftmargin=*]
+  \item {Refine timesync request handling to avoid sudden change of guest time.}
+  \item {Related patch accepted by the \textbf{FreeBSD kernel}.}
+\end{itemize}
 
 \section{\faUsers\ Projects}
 \datedsubsection{\textbf{DrTM}}{ 2015 - 2016 }
-\role{Distributed Transaction Processing}{Cooperated Research Project, C++}
+\role{Distributed Transaction Processing}{Research Project, C++}
+DrTM is a fast and general in-memory transaction system which provides high throughput and low latency.
+\\[5pt]
+DrTM leverages two hardware features called HTM and RDMA and designed a hardware-friendly protocol to boost the distributed transaction processing.
+\\[5pt]
 Related research papers were accepted by \textbf{SOSP’15} and \textbf{EuroSys’16} (\emph{top conferences in system}).
+\\[5pt]
+DrTM is a \textit{cooperated} project, my contributions are:
 \begin{itemize}[leftmargin=*]
   \item {Designed a lease-based shared lock using RDMA.}
   \item {Implemented a hybrid OCC protocol to preserve transaction generality.}
@@ -44,26 +54,64 @@ Related research papers were accepted by \textbf{SOSP’15} and \textbf{EuroSys�
 \end{itemize}
 
 \datedsubsection{\textbf{PowerLyra}}{ 2014 - 2015 }
-\role{Distributed Graph Computation}{Cooperated Research Project, C++}
+\role{Distributed Graph Computation}{Research Project, C++}
+Graph computation is widely used to reason about large-scale complex data in machine learning and data mining. PowerLyra is a performance extension to GraphLab, which is a open source graph computation framework.
+\\[5pt]
+PowerLyra discusses two ways of graph partition: Vertex-Cut and Edge-Cut and analyses their merits and demerits. It shows a hybrid partition to reduce redundant message and improves the performance dramatically.
+\\[5pt]
 Won the \textbf{Best Paper Award} from \textbf{EuroSys'15}.
+\\[5pt]
+PowerLyra is a \textit{cooperated} project, my contributions are:
 \begin{itemize}[leftmargin=*]
   \item {Analysed the replication factor for existing partitioning strategies.}
   \item {Implemented a hybrid partitioning strategy which leverages both locality and parallelism.}
 \end{itemize}
 
 \datedsubsection{\textbf{GENE-MAP}}{ 2013 - 2014 }
-\role{Map Generalization}{Individual Contest Project, C++}
+\role{Map Generalization}{Contest Project, C++}
+Map generalization is one of the core technologies for online map service. GENE-MAP provides an efficient generalization algorithm to make a trade off between precision and speed.
+\\[5pt]
+GENE-MAP exploits \textit{iteration} and \textit{greedy} strategy to ensure a good balance between precision and speed.
+\\[5pt]
 Won the \textbf{3rd Place Prize} from 2014 ACM GISCUP Competition
+\\[5pt]
+GENE-MAP is a \textit{personal} project, my contributions are:
 \begin{itemize}[leftmargin=*]
   \item {Designed and implemented an iterative and greedy algorithm for map generalization.}
   \item {Parallelized the algorithm using the OpenMP library.}
 \end{itemize}
+
+\section{\faFile\ Publications}
+\titleformat{\subsection}
+  {\normalsize\raggedright}
+  {}{0em}
+  {}
+ \datedsubsection{\textbf{Fast and General Distributed Transactions using RDMA and HTM}}{\textbf{EuroSys} 2016}
+ \datedline{\small\underline{Yanzhe Chen}, Xinda Wei, Jiaxin Shi, Rong Chen and Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/drtmr-eurosys16.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/drtmr-eurosys16-slides.pptx}{\faFilePowerpointO}}
+
+ \datedsubsection{\textbf{Fast In-memory Transaction Processing using RDMA and HTM}}{\textbf{SOSP} 2015}
+ \datedline{\small Xingda Wei, Jiaxin Shi, \underline{Yanzhe Chen}, Rong Chen, Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/drtm-sosp15.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/drtm-sosp15-slides.pptx}{\faFilePowerpointO}}
+
+ \titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+ \datedsubsection{\textbf{PowerLyra: Differentiated Graph Computation and Partitioning on Skewed Graphs}}{\textbf{EuroSys} 2015}
+ \datedline{\small Rong Chen, Jiaxin Shi, \underline{Yanzhe Chen}, Haibo Chen.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/powerlyra-eurosys15.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/powerlyra-eurosys15-slides.pptx}{\faFilePowerpointO}}
+
+ \datedsubsection{\textbf{Greedy Map Generalization by Iterative Point Removal}}{\textbf{SIGSPATIAL} 2014}
+ \datedline{\small\underline{Yanzhe Chen}, Yin Wang, Rong Chen, Haibo Chen and Binyu Zang.}{\href{http://ob88vwut3.bkt.clouddn.com/papers/gmap-sigspatialcup14.pdf}{\faFilePdfO}\ \ \href{http://ob88vwut3.bkt.clouddn.com/slides/gmap-sigspatialcup14-slides.pptx}{\faFilePowerpointO}}
 
 \section{\faHeartO\ Honors and Awards}
 \datedsubsection{ACM EuroSys Best Paper Award}{2015}
 \datedsubsection{First-class Academic Scholarship for M.S., Shanghai Jiao Tong University}{2014}
 \datedsubsection{ACM SIGSPATIAL GISCUP \nth{3} Place}{2014}
 \datedsubsection{Outstanding College Graduate of Shanghai Jiao Tong University}{2014}
+\datedsubsection{XinDong Scholarship (second-class) of Shanghai Jiao Tong University}{2013}
+\datedsubsection{Sun Hung Kai Properties Scholarship}{2012}
+\datedsubsection{ShenYin and WanGuo Special Scholarship of Shanghai Jiao Tong University}{2011}
+
+\section{\faBook\ Teaching Assistant}
+ \datedsubsection{Computer System Design and Implementation}{2016}
+ \datedsubsection{Distributed Systems}{2015}
+ \datedsubsection{Introduction to Programming}{2013}
 
 \section{\faCogs\ SKILLS}
 \begin{itemize}[leftmargin=*, parsep=1.0ex]
